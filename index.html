@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- My Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    
+    <!-- Icofonts -->
+    <link rel="stylesheet" href="icofont/icofont.min.css">
+
+    <!-- Call jQuery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+      // membuat Scrollspy effect pada navbar (Jika halaman di scroll ke bawah, navbar akan ditambahkan kelas baru untuk mengganti style)
+      $(document).ready(function(){
+          //kondisi awal
+          $(".navbar").addClass("scrolledless");
+          $(window).scroll(function(){
+              //kondisi ketika scroll melebihi posisi 250
+              if($(this).scrollTop() > 250) {
+                $(".navbar").addClass("scrolled");
+                $(".navbar").removeClass("scrolledless");
+              } else {
+                $(".navbar").removeClass("scrolled");
+                $(".navbar").addClass("scrolledless");
+              }
+          });
+      });
+  </script>
+    <title>Imam Shofiuddin</title>
+  </head>
+  <body>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="img/IS_logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="#foto">Foto</a>
+              <a class="nav-link" href="#about-me">About me</a>
+              <a class="nav-link" href="#project">Project</a>
+              <a class="nav-link" href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+
+      <!-- Banner -->
+      <div class="jumbotron mt-5">
+        <div class="container text-center mt-2 mb-4">
+            <img src="img/foto_no-bg.png" alt="Imam Shofiuddin Photo" class="banner-item" id="foto">
+            <!-- span digunakan untuk memberikan style tertentu dalam elemen tertentu-->
+            <p class="banner-item judul"><span style="display: block;">Hello World!</span>I'm Imam Shofiuddin</p>
+            <p class="banner-item"><span style="display: block;">Welcome to my portfolio website</span> Let's find more about me</p>
+        </div>
+      </div>
+      <!-- End Banner -->
+
+      <!-- About Me -->
+      <section class="about-me" id="about-me">
+        <div class="container p-5 text-center">
+            <h2>About Me</h2>
+            <div class="row">
+              <!-- Foto -->
+                <div class="col-lg">
+                  <img src="img/fotos.png" alt="">
+                </div>
+                <!-- Text -->
+                <div class="col-lg text">
+                  <p>From an early age I was always very interested in IT. I am currently interested in web and android developers. Not only in web developer but I have the ability in the field of UI/UX designer, video editing, graphic design and animators.</p>
+                  <!-- Tabel untuk meletakkan data diri agar rapi -->
+                  <table border="0" cellpadding="5">
+                    <tr>
+                      <td style="font-weight: bold;">Name :</td>
+                      <td>Imam Shofiuddin</td>
+                    </tr>
+                    <tr>
+                      <td style="font-weight: bold;">Date of Birth :</td>
+                      <td>14 February 2003</td>
+                    </tr>
+                    <tr>
+                      <td style="font-weight: bold;">Address :</td>
+                      <td>Jl. WR.Supratman no.49, Jombang</td>
+                    </tr>
+                    <tr>
+                      <td style="font-weight: bold;">Email :</td>
+                      <td>imamshofiuddin00@gmail.com</td>
+                    </tr>
+                    <tr>
+                      <td style="font-weight: bold;">Phone :</td>
+                      <td>081559632926</td>
+                    </tr>
+                  </table>
+                </div>
+            </div>
+        </div>
+      </section>
+      <!-- End About Me -->
+
+      <!-- Project -->
+      <!-- Ada 2 Row -->
+      <section class="project pb-5" id="project">
+        <div class="container">
+          <!-- Row 1 (Untuk meletakkan judul)-->
+          <div class="row justify-content-center">
+            <div class="col mt-5">
+              <h2>My Projects</h2>
+            </div>
+          </div>
+          <!-- Row 2 (Untuk meletakkan konten projek) -->
+          <div class="row justify-content-center align-item-center">
+            <!-- Row dibagi 3 kolom pada ukuran layar large, 2 kolom pada ukuran layar medium -->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <img src="img/AR .png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">AR EDU GAYA</h5>
+                  <p class="card-text">Android application about learning GAYA material based on Augmented Reality(AR), made with Unity 3D</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <img src="img/apk voltar edu.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">VoltAR EDU</h5>
+                  <p class="card-text">An android application about Augmented Reality (AR) based learning of static & dynamic electricity, made with Unity 3D</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <img src="img/apk corps.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Revolution Corps app</h5>
+                  <p class="card-text">Android app for Technical Meeting CORPS 2019, made with Unity</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <img src="img/figo.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Figo Restaurant Web</h5>
+                  <p class="card-text">Figo restaurant web design, made using bootstrap, html, css</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <img src="img/HN.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">HN Cake Logo</h5>
+                  <p class="card-text">HN Cake Jombang cake shop logo, made with CorelDraw</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <img src="img/ITDS logo 4.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">ITDS 2021 Logo</h5>
+                  <p class="card-text">Logo of the Department of Informatics & Data Science PENS, made with CorelDraw</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Project -->
+
+      <!-- Contact Us -->
+      <!-- Ada 3 Row -->
+      <section class="contact" id="contact">
+        <div class="container">
+          <!-- Row 1 (meletakkan judul)-->
+          <div class="row justify-content-center">
+            <div class="col mt-5 text-center mb-4">
+              <h2>Contact Me</h2>
+            </div>
+          </div>
+          <!-- Row 2 (meletakkan foto & form)-->
+          <div class="row justify-content-center form-box">
+            <div class="col-lg-4 col-md-5 col-sm-4 photo-bg" style="background-image: url('img/foto2.png');"></div>
+            <div class="col-lg-8 col-md-7 col-sm-8 p-5">
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" aria-describedby="emailHelp" required>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Message</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="button">
+                  <button type="submit" class="btn">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- Row 3 (Meletakkan card contact tambahan) -->
+          <div class="row justify-content-center mt-4 additional-contact">
+            <!-- Row dibagi 4 kolom pada ukuran layar large, 2 kolom pada ukuran layar medium -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="icon">
+                    <i class="icofont-home"></i>
+                  </div>
+                  <h5>Address</h5>
+                  <p>Jl. W.R. Supratman no.49, RT.002/RW.007, Dsn. Cumpleng, Ds. Pulorejo, Kec. Tembelang, Kab. Jombang, Kode Pos (61452)</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="icon">
+                    <i class="icofont-address-book"></i>
+                  </div>
+                  <h5>Contact Number</h5>
+                  <p>081559632926</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="icon">
+                    <i class="icofont-ui-email"></i>
+                  </div>
+                  <h5>Email Address</h5>
+                  <p>imamshofiuddin00@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="icon">
+                    <i class="icofont-earth"></i>
+                  </div>
+                  <h5>Social Media</h5>
+                  <ul>
+                    <li><span>LinkedIn</span> Imam Shofiuddin</li>
+                    <li><span>Youtube</span> Imam Shofiuddin</li>
+                    <li><span>Instagram</span> imamshofiuddin</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Us -->
+
+      <!-- Footer -->
+      <footer class="mt-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-6 text-white mt-5 mb-4" style="text-align: center;">
+              <img src="img/IS_logo 2.png" alt="IS Logo" style="width: 50%;"><br><br>
+              <p>Copyright ©2021 All rights reserved | Made by Imam Shofiuddin</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
